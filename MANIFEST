@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/SMS-Send-US-Ipipi.t
+lib/SMS/Send/US/Ipipi.pm
