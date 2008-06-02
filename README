@@ -1,16 +1,8 @@
-SMS-Send-Ipipi version 0.01
+SMS-Send-Ipipi
 ===========================
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
-
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+This README is a very bare skeleton. Please see the POD documentation
+found in the Ipipi.pm module included in the distribution.
 
 INSTALLATION
 
@@ -21,20 +13,43 @@ To install this module type the following:
    make test
    make install
 
+Since ipipi.com is a pay service, the test suite does not actually use
+it to send any text messages. If you would like to test that
+capability, you should set three environment variables:
+
+IPIPI_LOGIN - your ipipi.com username
+IPIPI_PASSWORD - your ipipi.com password
+IPIPI_DESTINATION - a mobile phone number to send a text message to.
+
+Then, run 'make test' again and a text message will be sent.
+   
 DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  blah blah blah
+  SMS::Send
+  Carp           
+  SMS::Send      
+  WWW::Mechanize 
+  IO::Socket::SSL
+  LWP            
+  File::Spec     
+  Test::More     
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
-Copyright (C) 2008 by Andrew Moore
+Copyright (C) 2008 LibLime L<http://liblime.com>
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,
 at your option, any later version of Perl 5 you may have available.
+
+Additionally, you are again reminded that this software comes with
+no warranty of any kind, including but not limited to the implied
+warranty of merchantability.
+
+ANY use my result in charges on your ipipi.com bill, and you should
+use this software with care. The author takes no responsibility for
+any such charges accrued.
 
 
